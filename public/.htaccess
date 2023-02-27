@@ -1,0 +1,14 @@
+# Enable rewriting engine
+RewriteEngine On
+
+# Redirect HTTP traffic to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Disable directory browsing
+Options -Indexes
+
+# Prevent hotlinking
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?example\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
