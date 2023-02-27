@@ -1,7 +1,7 @@
 <?php
 
-define('EMAIL_USERNAME', 'riverwebdevtest@gmail.com');
-define('EMAIL_PASSWORD', 'yomzajaizgxantuj');
+define('EMAIL_USERNAME', 'YOUR_EMAIL_ADDRESS');
+define('EMAIL_PASSWORD', 'YOUR_EMAIL_PASSWORD');
 
 $conn = mysqli_connect("localhost", "root", "mysql", "cyberhack_db");
 

@@ -1,4 +1,0 @@
-# Block access to all files in the private folder except for logout.php
-<FilesMatch "^(?!logout\.php).*$">
-  Require all denied
-</FilesMatch>
